@@ -1,0 +1,44 @@
+body {
+    margin:0;
+}
+.cabecera {
+    height: 10em;
+    width: 29cm;
+    background:#daffd1;
+    color: #3f4c3b;
+    display: flex;
+    position: relative;
+
+    background-image: url('RS.png');
+    background-repeat: no-repeat;
+    background-position: 97% 18%;
+}
+header img {
+    padding: 1rem;
+}
+header h1 {
+    padding-top: 5rem;
+}
+
+#botones {
+    position: absolute;
+    right: 3rem;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top:6rem;
+    margin-left: 5px;
+    color:#3f4c3b;
+    background-color: #daffd1;
+    border: 1px solid #3f4c3b;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c4fdb5
+}
+
