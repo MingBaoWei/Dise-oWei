@@ -61,6 +61,7 @@ button:hover {
 }
 
 #centro {
+    margin-left: 7em;
     text-align: center;
     font-family: fantasy;
 }
@@ -85,7 +86,7 @@ button:hover {
 #derecha {
     background-color: #daffd1;
     margin-top: 3em;
-    margin-left: 9em;
+    margin-left: 3em;
     margin-bottom: 11em;
     text-align: right;
 }
@@ -158,12 +159,12 @@ button:hover {
 }
 
 #piederecha1{
-    padding-left: 30em;
     margin-top: 2em;
+    margin-left: 5rem;
 }
 #piederecha2{
-    padding-left: 31em;
     margin-top: 2em;
+    margin-left: 5.5rem;
 }
 
 .pie img {
@@ -174,9 +175,79 @@ button:hover {
 }
 
 
-@media screen and (max-width: 650px) { /*Tablet*/
-    
+@media screen and (max-width: 724px) { /* Tablet */
+
+    button {
+        margin: 0.5rem;
+        margin-top: 10rem;
+    }
+
+    header img {
+        padding: 3rem;
+    }
+
+    header h1 {
+        padding-top: 4rem; 
+        text-align: center; 
+    }
+
+
+    .cuerpo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "centro"
+            "derecha";
+        background-color: antiquewhite;
+    }
+
+    .cuerpo p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #centro {
+        grid-area: centro;
+        margin-left: 0;
+        margin-left: 18rem;
+    }
+
+    #derecha {
+        grid-area: derecha;
+        background-color: #daffd1;
+        margin: 2em 1em 3em;
+        text-align: center;
+    }
+
+    #derecha h3 {
+        text-align: center;
+    }
+
+    #derecha input {
+        width: 85%;
+        margin: 0.5em;
+    }
+
+    .pie {
+        height: 100%;
+        background: #daffd1;
+        color: #3f4c3b;
+        position: relative;
+        width: 100%;
+    }
+
+    #piederecha1,
+    #piederecha2 {
+        padding-left: 0;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .pie img {
+        margin: 0.5em;
+    }
 }
+
 
 
 @media screen and (max-width: 450px) { /*Movil*/
@@ -209,6 +280,7 @@ button:hover {
         width: 100%;
         flex-direction: column;
         background-image: none;
+        background-color: rgb(251, 255, 190);
     }
 
     .cuerpo p {
