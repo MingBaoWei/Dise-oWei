@@ -25,9 +25,9 @@
 
 
     <main>
-
+        
         <div class="cuerpo">
-            <p><span id="azul">Inicio</span> > Sprints</p>
+            <p><span id="textoAnimado">Inicio > Sprints</span></p>
             <div id="centro">
                 <h1>¡Vaya!</h1>
                 <h2>Lo sentimos:<br>zona reservada<br>a usuarios registrados</h2>
@@ -40,6 +40,13 @@
                 <p>¿Olvidaste tu contraseña?</p>
                 <button>Aceptar</button>
             </div>
+
+            <audio controls loop preload="auto">
+                <source src="audio/Developers.mp3" type="audio/mp3">
+                <source src="audio/Developers.ogg" type="audio/ogg">
+                Tu navegador no aceptar este audio.
+            </audio>
+
         </div>
 
     </main>
@@ -60,6 +67,24 @@
         </div>
     </footer>
 
+    <div class="videos-container">
+        <div class="video-container">
+            <video autoplay controls loop width="100%">
+                <source src="videos/vid.mp4" type="video/mp4">
+                <source src="videos/vid.ogv" type="video/ogg">
+                Tu navegador no acepta el video.
+            </video>
+        </div>
+
+        <div class="video-container">
+            <iframe width="100%" 
+                src="https://www.youtube.com/watch?v=jUPD4hObRUs" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 </div>
 </body>
 </html>
