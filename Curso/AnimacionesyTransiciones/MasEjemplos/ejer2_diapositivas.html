@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Ejer2 </title>
+	<style type="text/css">
+		.pelota{
+			background-image: url(pelota.jpg);
+			width: 195px;
+			height: 196px;
+			position: relative;
+			animation: bota 1s alternate infinite;
+		}
+		@keyframes bota{
+			0%{
+				top: 20px;
+			}
+			100%{
+				top:140px;
+				height: 145px;
+				transform: translateY(300px);
+				/* transform: ScaleY(0.6);*/
+				/*transform: scale(1,0.6);*/
+				/*transform: scaleX();*/
+				/*transform: scaleY(0.6);*/
+			}
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<div class="pelota"></div>
+	</center>
+</body>
+</html>
