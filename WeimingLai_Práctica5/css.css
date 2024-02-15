@@ -1,3 +1,7 @@
+/*********************************___: INICIO :___*************************************/
+/*********************************___: INICIO :___*************************************/
+/*********************************___: INICIO :___*************************************/
+
 html, body {
     margin: 0;
     padding: 0;
@@ -94,35 +98,35 @@ h1, h2, p {
 @keyframes scaleAndColorChange {
     0%, 100% {
         font-size: 60px;
-        color: red;
+        color: rgb(57, 0, 0);
     }
     14% {
         font-size: 85px;
-        color: orange;
+        color: rgb(255, 230, 0);
     }
     28% {
         font-size: 60px;
-        color: yellow;
+        color: rgb(57, 0, 0);
     }
     42% {
         font-size: 85px;
-        color: green;
+        color: rgb(255, 230, 0);
     }
     56% {
         font-size: 60px;
-        color: blue;
+        color: rgb(57, 0, 0);
     }
     70% {
         font-size: 85px;
-        color: indigo;
+        color: rgb(255, 230, 0);
     }
     84% {
         font-size: 60px;
-        color: violet;
+        color: rgb(57, 0, 0);
     }
     100% {
         font-size: 85px;
-        color: rgb(255, 0, 85);
+        color: rgb(255, 230, 0);
     }
 }
 
@@ -130,4 +134,26 @@ h1, h2, p {
     animation: scaleAndColorChange 5s infinite alternate;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+}
+
+
+
+/*********************************___: JUEGO :___*************************************/
+/*********************************___: JUEGO :___*************************************/
+/*********************************___: JUEGO :___*************************************/
+
+.juego {
+    background-image: url('img/fondo2.jpg');
+    background-size: cover;
+    height: 100%;
+
+    position:relative;
+}
+
+#personaje {
+    position: absolute; /* Posicionar de forma absoluta dentro del contenedor */
+    width: 50px; /* Ancho de la imagen */
+    height: auto; /* Altura automáticamente calculada */
+    pointer-events: none; /* Evitar que el personaje intercepte eventos del ratón */
+    /* Otras propiedades de estilo para el personaje */
 }

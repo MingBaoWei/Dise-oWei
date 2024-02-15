@@ -1,3 +1,6 @@
+/*********************************___: INICIO :___*************************************/
+/*********************************___: INICIO :___*************************************/
+/*********************************___: INICIO :___*************************************/
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener referencias a los elementos del DOM
     const instructionsButton = document.getElementById("instructions-button");
@@ -22,3 +25,35 @@ document.addEventListener("DOMContentLoaded", function() {
         instructionsContainer.style.display = "none";
     });
 });
+
+
+/*********************************___: JUEGO :___*************************************/
+/*********************************___: JUEGO :___*************************************/
+/*********************************___: JUEGO :___*************************************/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const personaje = document.getElementById("personaje");
+
+    // Función para actualizar la posición del personaje
+    function actualizarPosicion(event) {
+        // Obtener la posición del ratón
+        const x = event.clientX;
+        const y = event.clientY;
+
+        // Obtener el ancho y alto de la imagen
+        const anchoPersonaje = personaje.offsetWidth;
+        const altoPersonaje = personaje.offsetHeight;
+
+        // Calcular la nueva posición para centrar la imagen en el puntero
+        const nuevaPosX = x - (anchoPersonaje / 2);
+        const nuevaPosY = y - (altoPersonaje / 2);
+
+        // Actualizar la posición del personaje
+        personaje.style.left = nuevaPosX + "px";
+        personaje.style.top = nuevaPosY + "px";
+    }
+
+    // Escuchar eventos de movimiento del ratón
+    document.addEventListener("mousemove", actualizarPosicion);
+});
+
