@@ -115,6 +115,18 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
         verificarColision();
     }, 1); // Verificar cada 1 milisegundos
+
+    var obstaculo = document.getElementById("obstaculo");
+
+    // Obtener el ancho de la ventana del navegador
+    var ventanaAncho = window.innerWidth;
+
+    // Generar una posición horizontal aleatoria para el obstáculo
+    var posicionInicialX = Math.floor(Math.random() * (ventanaAncho - 100)); // Restamos 100 para tener en cuenta el ancho del obstáculo
+
+    // Aplicar la posición horizontal aleatoria al estilo del obstáculo
+    obstaculo.style.left = posicionInicialX + "px";
+    
 });
 
 

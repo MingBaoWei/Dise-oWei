@@ -151,16 +151,23 @@ h1, h2, p {
 }
 
 #personaje {
-    position: absolute; /* Posicionar de forma absoluta dentro del contenedor */
-    width: 50px; /* Ancho de la imagen */
-    height: auto; /* Altura automáticamente calculada */
-    pointer-events: none; /* Evitar que el personaje intercepte eventos del ratón */
-    /* Otras propiedades de estilo para el personaje */
+    position: absolute;
+    width: 50px;
+    height: auto;
+    pointer-events: none;
+
 }
 
 #obstaculo{
-    position: absolute; /* Posicionar de forma absoluta dentro del contenedor */
-    width: 50px; /* Ancho de la imagen */
-    height: auto; /* Altura automáticamente calculada */
+    position: absolute;
+    width: 50px;
+    height: auto;
     pointer-events: none;
+    animation: aparecerYCaer 4s ease-out infinite; 
+}
+
+@keyframes aparecerYCaer {
+    0% { top: -100px} 
+
+    100% { top: calc(100% - 100px); } 
 }
