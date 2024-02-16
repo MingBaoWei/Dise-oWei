@@ -157,3 +157,10 @@ h1, h2, p {
     pointer-events: none; /* Evitar que el personaje intercepte eventos del ratón */
     /* Otras propiedades de estilo para el personaje */
 }
+
+#obstaculo{
+    position: absolute; /* Posicionar de forma absoluta dentro del contenedor */
+    width: 50px; /* Ancho de la imagen */
+    height: auto; /* Altura automáticamente calculada */
+    pointer-events: none;
+}

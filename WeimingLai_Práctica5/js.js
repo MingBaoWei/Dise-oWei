@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const instructionsContainer = document.getElementById("instructions-container");
     const closeInstructionsButton = document.getElementById("close-instructions");
 
-    // Agregar listeners a los botones
     instructionsButton.addEventListener("click", function() {
         // Mostrar el contenedor de instrucciones
         instructionsContainer.style.display = "block";
@@ -56,4 +55,67 @@ document.addEventListener("DOMContentLoaded", function() {
     // Escuchar eventos de movimiento del ratón
     document.addEventListener("mousemove", actualizarPosicion);
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var puntos = 0;
+    var vidas = 3;
+    var intervalo;
+    var colision = false; 
+
+    // Función para aumentar la puntuación cada segundo con setinterval
+    function aumentarPuntuacion() {
+        intervalo = setInterval(function() {
+            puntos++;
+            document.getElementById("puntos").textContent = puntos;
+            if (colision) {
+                restarVida();
+                colision = false;
+            }
+        }, 1000);
+    }
+
+    // Función para restar una vida
+    function restarVida() {
+        vidas--;
+        document.getElementById("vidas").textContent = vidas;
+        if (vidas === 0) {
+            clearInterval(intervalo); //CLEARINTERVAL
+            gameOver();
+        }
+    }
+
+    // Función para mostrar la pantalla de Game Over
+    function gameOver() {
+        window.location.href = "game_over.html";
+    }
+
+    // Función para verificar la colisión entre "vayne" y "obstaculo"
+    function verificarColision() {
+        var vayne = document.getElementById("personaje");
+        var obstaculo = document.getElementById("obstaculo");
+        var vayneRect = vayne.getBoundingClientRect();
+        var obstaculoRect = obstaculo.getBoundingClientRect();
+
+        if (
+            vayneRect.left < obstaculoRect.right &&
+            vayneRect.right > obstaculoRect.left &&
+            vayneRect.top < obstaculoRect.bottom &&
+            vayneRect.bottom > obstaculoRect.top
+        ) {
+            colision = true; 
+            setTimeout(function() {
+                colision = false; // Después de 1 segundo, volver a permitir la colisión
+            }, 1000);
+        }
+    }
+
+    aumentarPuntuacion();
+
+    setInterval(function() {
+        verificarColision();
+    }, 1); // Verificar cada 1 milisegundos
+});
+
+
 
