@@ -12,15 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
         instructionsContainer.style.display = "block";
     });
 
-    startButton.addEventListener("click", function() {
-        // Redirigir a otra página
-        window.location.href = "game.html";
-    });
-    
     closeInstructionsButton.addEventListener("click", function() {
         // Ocultar el contenedor de instrucciones cuando se hace clic en el botón de cerrar
         instructionsContainer.style.display = "none";
     });
+
+    startButton.addEventListener("click", function() {
+        setTimeout(function() {
+            window.location.href = "game.html";
+        }, 3000);
+    });
+    
 });
 
 
@@ -164,4 +166,3 @@ aumentarPuntuacion().then(() => {
         nuevaPosicionHorizontal(obstaculo3);
     });
 });
-
