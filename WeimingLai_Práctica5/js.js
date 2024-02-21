@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     startButton.addEventListener("click", function() {
         setTimeout(function() {
             window.location.href = "game.html";
-        }, 3000);
+        }, 2000);
     });
     
 });
