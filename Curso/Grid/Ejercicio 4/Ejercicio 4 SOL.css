@@ -1,0 +1,39 @@
+body{
+	margin: 0;	
+}
+
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 20vh 1fr 20vh;
+	
+	/* Ocupamos tantas columnas como sea necesario para lograr el diseño de la imagen */
+	grid-template-areas: ". . . header header header header header header . . ." 
+		"aside aside aside aside . main main main main main main main" 
+		". . . . footer footer footer footer . . . .";
+	grid-gap: 5px;
+}
+
+.item {
+	background: #89ece1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container > header {
+	grid-area: header;
+}
+
+.container > main {
+	grid-area: main;
+}
+
+.container > aside {
+	grid-area: aside;
+}
+
+.container > footer {
+	grid-area: footer;
+}

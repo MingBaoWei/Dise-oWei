@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,h4,p {
+  margin: 0px;
+}
+
+/* Este es el contenedor General donde fijo la estructura de la rejilla o Grid */
+div.container {
+  color: #666666;
+  display: grid;
+  font-family: "Lobster", cursive;
+  grid-auto-flow: row;
+  grid-row-gap: 1em;
+  
+  /* No está pensado para un diseño responsivo, pero con el rango de 30% a 1fr se crean columnas automáticas descuadrando lo menos posible */
+  grid-template-columns: 10% repeat(auto-fill, minmax(30%, 1fr));
+  /*grid-template-columns: 100px 400px 300px 100px;*/
+  grid-template-rows: 15vh 60vh 45vh 15vh;
+  margin: 20px auto;
+  width: 90%;
+}
+
+/* Cabecera de la página */
+div.container header {
+  border-bottom: 1px solid #666666;
+  grid-column: 1 / 5;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Menú lateral */
+div.container nav {
+  grid-row: 2 / 4;
+  padding: 1em;
+}
+
+div.container nav div {
+  margin-bottom: 1em;
+}
+
+/* Imagen grande */
+div.container main {
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  grid-column: 2 / 4;
+  justify-self: center;
+  padding: 1em;
+  text-align: center;
+  width: 90%;
+}
+
+div.container main img {
+  border-radius: 1em;
+  height: 70%;
+  width: 80%;
+}
+
+/* Resto de imágenes. Colocadas por grid-auto-flow que por defecto es row */
+div.container article {
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+div.container article img {
+  border-radius: 1em;
+  height: 60%;
+  width: 100%;
+}
+
+div.container .derecha{
+  justify-self: end;
+  width: 90%;
+}
+
+/* Pie de la página */
+div.container footer {
+  grid-column: 1 / 5;
+  border-top: 1px solid #666666;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%,1fr));
+  justify-content: space-between;
+  padding: 2em;
+}
+
+div.container footer img {
+  width: 3rem;
+  height: 3rem;
+}
+
+div.container footer div.social{
+  justify-self: end;	
+}
