@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Ejemplo de layout con flex para evitar desbordamientos con el margen -->
+<html lang="en">
+<head>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		  
+		.container{
+			border: 1px solid black;		
+			display: flex;
+				
+			padding: 0.5em;
+			width: 80%;
+			margin: 1em auto;
+		}
+		  
+		#container_nowrap {
+			flex-wrap: nowrap;	
+		}
+		
+		#container_wrap {
+			flex-wrap: wrap;
+		}				
+		
+		.element{
+			display: flex; /* Es necesario indicar display: flex en los subcontenedores */
+			justify-content: center;
+			align-items: center;
+			flex-basis: 50%;
+			height: 3em;
+			margin: 0.5em;
+			border: 1px solid green;
+		}
+		
+		#container_wrap .element{
+			flex-basis: calc(50% - 1em);		
+		}
+	</style> 
+
+</head>
+
+<body>
+	<div id="container_nowrap" class="container"> <!-- Con nowrap se quedan los elementos en la misma fila y se adptan al ancho -->
+		<div class="element">Lorem ipsum</div>
+		<div class="element">Lorem ipsum</div>
+		<div class="element">Lorem ipsum</div>
+		<div class="element">Lorem ipsum</div>
+	</div>
+	
+	<div id="container_wrap" class="container"> <!-- Con wrap si que hay salto de línea cuando los elementos ocupan el límite del contenedor -->
+		<div class="element">Lorem ipsum</div>
+		<div class="element">Lorem ipsum</div>
+		<div class="element">Lorem ipsum</div>
+		<div class="element">Lorem ipsum</div>
+	</div>
+
+</body>
